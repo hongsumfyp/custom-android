@@ -80,6 +80,16 @@ task wrapper(type: Wrapper) {
     gradleVersion = '3.2'
 }
 
+plugins {
+  id "com.srcclr.gradle" version "2.2.15"
+}
+
+apply plugin: "srcclr"
+
+srcclr {
+  apiToken = "7e70ce79-28d3-4761-a861-9c6ab798b7d7 " //Only required if environment variable is not set
+}
+
 /*buildscript {
     repositories {
         mavenCentral()
