@@ -1,7 +1,10 @@
 buildscript{
 	repositories {
 		mavenCentral()
-		maven { url 'http://jcenter.bintray.com' }
+		maven { 
+		url 'http://jcenter.bintray.com' 
+		url 'https://plugins.gradle.org/m2/'
+		}
 	}
 	dependencies {
 		classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '2.1.0'
@@ -74,14 +77,11 @@ dependencies {
 
 	compile group: 'org.apache.oodt', name: 'oodt-core', version: '0.4'
 	compile group: 'net.bull.javamelody', name: 'javamelody-core', version: '1.61.0'
+	classpath 'gradle.plugin.com.srcclr:gradle:2.2.15'
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '3.2'
-}
-
-plugins {
-  id 'com.srcclr.gradle' version '2.2.15'
 }
 
 apply plugin: 'srcclr'
@@ -89,6 +89,7 @@ apply plugin: 'srcclr'
 srcclr {
   apiToken = '7e70ce79-28d3-4761-a861-9c6ab798b7d7' //Only required if environment variable is not set
 }
+
 
 /*buildscript {
     repositories {
