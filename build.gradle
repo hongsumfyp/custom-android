@@ -81,13 +81,13 @@ task wrapper(type: Wrapper) {
 }
 
 plugins {
-  id "com.srcclr.gradle" version "2.2.15"
+  id 'com.srcclr.gradle' version '2.2.15'
 }
 
-apply plugin: "srcclr"
+apply plugin: 'srcclr'
 
 srcclr {
-  apiToken = "7e70ce79-28d3-4761-a861-9c6ab798b7d7 " //Only required if environment variable is not set
+  apiToken = '7e70ce79-28d3-4761-a861-9c6ab798b7d7' //Only required if environment variable is not set
 }
 
 /*buildscript {
